@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backstage Talks</title>
+    <link rel="icon" type="image/png" href="assets/icon.png">
+    <link rel="stylesheet" href="/index.css">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="scripts/in-view.min.js"></script>
+    <script src="scripts/jquery.scrollie.min.js"></script>
+
+</head>
+<body class="body-container">
+    <div class="flexbox-container">
+    </div>
+    <div class="grid grid-1">
+        <!-- <h2>Backstage Talks</h2> -->
+        <img src="/assets/logo-backstage.png" alt="">
+    </div>
+        <div class="issue issue-7" id="issue7" data-background="#ff608c">
+            <img src="assets/issue_7.png" alt="">
+            <h5>Issue #7</h5>
+            <p><a href="#">BUY HERE</a> (Europe)</p>
+            <p><a href="#">BUY HERE</a> (UK & Overseas)</p>
+            <p>or in selected stores</p>
+        </div>
+
+        <div class="issue issue-6" id="issue6" data-background="#ffffff">
+            <img src="assets/issue_6.png" alt="">
+            <h5>Issue #6</h5>
+            <p><a href="#">BUY HERE</a></p>    
+            <p>or in selected stores</p>
+        </div>
+
+        <div class="issue issue-5" id="issue5" data-background="#4cdbcc">
+            <img src="assets/issue_5.png" alt="">
+            <h5>Issue #5</h5>
+            <p><a href="#">BUY HERE</a></p>  
+            <p>or in selected stores</p>
+        </div>
+
+        <div class="issue issue-4" id="issue4" data-background="#ff672b">
+            <img src="assets/issue_4.png" alt="">
+            <h5>Issue #4 is sold out.</h5>
+            <p>If you are lucky, you may get the last prices in <a>select stores</a></p>
+        </div>
+
+        <div class="issue issue-3" id="issue3" data-background="#ffbf3f">
+            <img src="assets/issue_3.png" alt="">
+            <h5>Issue #3</h5>
+            <p><a href="#">BUY HERE</a> (Europe)</p>
+            <p>or in selected stores</p>
+        </div>
+
+        <div class="issue issue-2" id="issue2" data-background="#1533b8">
+            <img src="assets/issue_2.png" alt="">
+            <h5>Issue #2</h5>
+            <p><a href="#">BUY HERE</a></p>
+            <p>or in selected stores</p>
+        </div>
+
+        <div class="issue issue-1" id="issue1" data-background="#e70303">
+            <img src="assets/issue_1.png" alt="">
+            <h5>Issue #1</h5>
+            <p><a href="#">BUY HERE</a></p>
+            <p>or in selected stores</p>
+        </div>
+
+        <div class="grid grid-2">
+            <h4>info@backstagetalks.com</h4>
+        </div>
+
+        <div class="grid grid-3">
+            <h4>Backstage Talks is a magazine of casual, but in depth dialogues on design and business. Our decisions shape and influence this complex world—to have a chance to make the right ones, we need to talk.</h4>
+
+            <span>© 2024 <a href="#">Published by Büro Milk</a></span>
+
+            <h4><a href="#">Privacy Policy</a></h4>
+        </div>
+
+        <div class="grid grid-4">
+            <ul>
+                <li><a href="#issue7">Issue #7</a></li>
+                <li><a href="#issue6">Issue #6</a></li>
+                <li><a href="#issue5">Issue #5</a></li>
+                <li><a href="#issue4">Issue #4</a></li>
+                <li><a href="#issue3">Issue #3</a></li>
+                <li><a href="#issue2">Issue #2</a></li>
+                <li><a href="#issue1">Issue #1</a></li>
+            </ul>
+        </div>
+</body>
+
+<script>
+$( window ).ready(function() {
+    var view = $(window).height();
+    $('.issue')
+    .height(view)
+    .scrollie({
+        scrollOffset : -50,
+        scrollingInView : function(elem) {
+            var bgColor = elem.data('background');
+            $('body').css('background-color', bgColor);
+        }
+    });
+});
+</script>
+</html>
